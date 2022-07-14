@@ -31,6 +31,7 @@ class Gradeable():
             raise ValidationError('Нельзя сравнить разные типы.')
         return self.avg_grade() == other.avg_grade()
 
+
 class Student(Person, Gradeable):
     def __init__(self, name, surname, gender):
         super().__init__(name, surname, gender)
